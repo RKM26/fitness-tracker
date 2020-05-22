@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "Dev": "nodemon trackserver/src/index.js"
+    "Dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.15",
     "nodemon": "^2.0.4"
+
   }
 }
