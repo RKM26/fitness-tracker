@@ -38,6 +38,9 @@ mongoose.connection.on('error',(err)=>{
 app.get('/',requireAuth,(req,res)=>{
     res.send(`your email: ${req.user.email}`);
 });
+app.get('/test',(req,res)=>{
+    res.send('tracker api working fine');
+});
 
 app.listen(3000,()=>{
     console.log('listening on port 3000');
