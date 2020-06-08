@@ -38,9 +38,6 @@ mongoose.connection.on('error',(err)=>{
 app.get('/',requireAuth,(req,res)=>{
     res.send(`your email: ${req.user.email}`);
 });
-app.get('/test',(req,res)=>{
-    res.send('tracker api working fine');
-});
 
 var server = app.listen(port, function () {
     var host = server.address().address;
