@@ -6,7 +6,7 @@ const bodyParser=require('body-parser');
 const authRoutes=require('./routes/authRoutes')
 const requireAuth= require('./middlewares/requireAuth')
 const trackRoutes=require('./routes/trackRoutes')
-
+var port = process.env.PORT || 3000;
 
 const app=express(); 
 
@@ -42,7 +42,8 @@ app.get('/test',(req,res)=>{
     res.send('tracker api working fine');
 });
 
-app.listen(3000,()=>{
-    console.log('listening on port 3000');
-    
-})
+var server = app.listen(port, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log(`Example app listening at http://%s:%s`, host, port);
+  });
